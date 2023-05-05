@@ -21,6 +21,7 @@
 		85752DC82A050B1D00F541C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85752DC72A050B1D00F541C3 /* NetworkManager.swift */; };
 		85752DCA2A050B5F00F541C3 /* NetworkableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85752DC92A050B5F00F541C3 /* NetworkableProtocol.swift */; };
 		85752DCC2A050C2E00F541C3 /* PlanetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85752DCB2A050C2E00F541C3 /* PlanetDetails.swift */; };
+		85752DCE2A054CB400F541C3 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85752DCD2A054CB400F541C3 /* FakeNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		85752DC72A050B1D00F541C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		85752DC92A050B5F00F541C3 /* NetworkableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkableProtocol.swift; sourceTree = "<group>"; };
 		85752DCB2A050C2E00F541C3 /* PlanetDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetails.swift; sourceTree = "<group>"; };
+		85752DCD2A054CB400F541C3 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				85752DC72A050B1D00F541C3 /* NetworkManager.swift */,
 				85752DC92A050B5F00F541C3 /* NetworkableProtocol.swift */,
+				85752DCD2A054CB400F541C3 /* FakeNetworkManager.swift */,
 			);
 			path = Netowrk;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				85752DCC2A050C2E00F541C3 /* PlanetDetails.swift in Sources */,
 				85752D9D2A05020600F541C3 /* iOSAssignment23Combine.xcdatamodeld in Sources */,
 				85752DC82A050B1D00F541C3 /* NetworkManager.swift in Sources */,
+				85752DCE2A054CB400F541C3 /* FakeNetworkManager.swift in Sources */,
 				85752DCA2A050B5F00F541C3 /* NetworkableProtocol.swift in Sources */,
 				85752D932A05020300F541C3 /* ContentView.swift in Sources */,
 				85752D912A05020300F541C3 /* iOSAssignment23CombineApp.swift in Sources */,

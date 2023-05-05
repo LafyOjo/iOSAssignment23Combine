@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkService {
-    func fetchPlanets(completion: @escaping (Result<[Planet], Error>) -> Void, url: URL)
+    func fetchPlanets(url: URL, completion: @escaping (Result<[Planet], Error>) -> Void)
 }

@@ -19,6 +19,7 @@ struct PlanetDetailView: View {
             Text("Climate: \(planet.climate)")
             Text("Terrain: \(planet.terrain)")
             Text("Population: \(planet.population)")
+            Text("ID: \(planet.id)")
             // Fetch and display data from nested APIs, like residents and films
         }
         .padding()

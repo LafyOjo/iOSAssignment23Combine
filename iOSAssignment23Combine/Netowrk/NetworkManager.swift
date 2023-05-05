@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 class NetworkManager: NetworkService, ObservableObject {
+    
     @Published var planets: [Planet] = []
     @Published var searchQuery: String = ""
     @Published var error: Error?
