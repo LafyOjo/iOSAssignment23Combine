@@ -41,6 +41,7 @@ struct PlanetListView: View {
                             networkManager.searchQuery = query
                         }
                     }
+                
                 List(networkManager.planets) { planet in
                     NavigationLink(destination: PlanetDetailView(planet: planet)) {
                         HStack {
@@ -70,7 +71,7 @@ struct PlanetListView: View {
                                 networkManager.planets = planets
                             }
                         case .failure(let error):
-                            print("Error fetching planets:", error)
+                            print("Error fetching the planets:", error)
                         }
                     }, url: defaultURL)
                 }
