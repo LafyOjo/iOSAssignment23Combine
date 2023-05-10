@@ -64,7 +64,7 @@ struct PlanetListView: View {
                 }
                 .onAppear {
                     let defaultURL = URL(string: "https://swapi.dev/api/planets/")!
-                    networkService.fetchPlanets(completion: { result in
+                    networkService.fetchPlanets(url: defaultURL, completion: { result in
                         switch result {
                         case .success(let planets):
                             DispatchQueue.main.async {
@@ -73,7 +73,7 @@ struct PlanetListView: View {
                         case .failure(let error):
                             print("Error fetching the planets:", error)
                         }
-                    }, url: defaultURL)
+                    })
                 }
                 .navigationTitle("Planets")
             }

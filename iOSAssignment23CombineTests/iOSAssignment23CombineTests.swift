@@ -10,6 +10,7 @@ import XCTest
 @testable import iOSAssignment23Combine
 
 class MyAppTests: XCTestCase {
+    
     func testFetchPlanets() {
         let mockNetworkService = MockNetworkService()
         mockNetworkService.planets = [
@@ -17,7 +18,7 @@ class MyAppTests: XCTestCase {
             Planet(name: "Alderaan", climate: "temperate", terrain: "grasslands, mountains", population: "2000000000", residents: [], films: [], imageUrl: nil)
         ]
 
-        let networkManager = NetworkManager()
+        let networkManager = MockNetworkService()
         let expectation = XCTestExpectation(description: "Fetching planets")
         let testURL = URL(string: "https://example.com/api/planets")!
 
@@ -37,5 +38,25 @@ class MyAppTests: XCTestCase {
         }
 
         wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testSearchBar() {
+        let networkManager = NetworkManager()
+        networkManager.planets = [
+            Planet(name: "Tatooine", climate: "arid", terrain: "desert", population: "200000", residents: [], films: [], imageUrl: nil),
+            Planet(name: "Alderaan", climate: "temperate", terrain: "grasslands, mountains", population: "2000000000", residents: [], films: [], imageUrl: nil),
+            Planet(name: "Coruscant", climate: "temperate", terrain: "cityscape", population: "1000000000000", residents: [], films: [], imageUrl: nil)
+        ]
+
+        XCTAssertEqual(networkManager.planets.count, 3)
+
+        networkManager.search(query: "Tatooine")
+        XCTAssertEqual(networkManager.planets.count, 1)
+        XCTAssertEqual(networkManager.planets[0].name, "Tatooine")
+
+        networkManager.search(query: "a")
+        XCTAssertEqual(networkManager.planets.count, 2)
+        XCTAssertEqual(networkManager.planets[0].name, "Tatooine")
+        XCTAssertEqual(networkManager.planets[1].name, "Alderaan")
     }
 }

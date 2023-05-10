@@ -9,6 +9,10 @@ import Foundation
 import Combine
 
 class NetworkManager: NetworkService, ObservableObject {
+    func fetchPlanets(url: URL, completion: @escaping (Result<[Planet], Error>) -> Void) {
+         
+    }
+    
     
     @Published var planets: [Planet] = []
     @Published var searchQuery: String = ""
@@ -59,4 +63,11 @@ class NetworkManager: NetworkService, ObservableObject {
         guard !searchQuery.isEmpty else { return nil }
         return URL(string: "https://swapi.dev/api/planets/?search=\(searchQuery)")
     }
+    
+    func search(query: String) {
+            let filteredPlanets = planets.filter { planet in
+                planet.name.lowercased().contains(query.lowercased())
+            }
+            planets = filteredPlanets
+        }
 }
